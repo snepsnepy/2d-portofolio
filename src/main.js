@@ -7,12 +7,16 @@ k.loadSprite("spritesheet", "./spritesheet.png", {
   sliceY: 11,
 });
 
-k.loadSprite("character", "./char.png", {
-  sliceX: 6,
-  sliceY: 1,
+k.loadSprite("character", "./character.png", {
+  sliceX: 39,
+  sliceY: 31,
   anims: {
-    idle: 0,
-    walk: { from: 0, to: 5, loop: true, speed: 4 },
+    "idle-down": 936,
+    "walk-down": { from: 936, to: 939, loop: true, speed: 4 },
+    "idle-side": 975,
+    "walk-side": { from: 975, to: 978, loop: true, speed: 4 },
+    "idle-up": 1014,
+    "walk-up": { from: 1014, to: 1017, loop: true, speed: 4 },
   },
 });
 
@@ -36,7 +40,7 @@ k.scene("main", async () => {
   const map = k.add([k.sprite("map"), k.pos(0), k.scale(scaleFactor)]);
 
   const player = k.make([
-    k.sprite("character", { anim: "idle" }),
+    k.sprite("character", { anim: "idle-down" }),
     k.area({
       shape: new k.Rect(k.vec2(0, 3), 10, 10),
     }),
@@ -44,7 +48,7 @@ k.scene("main", async () => {
     k.body(),
     k.anchor("center"),
     k.pos(scaleFactor),
-    k.scale(2.5),
+    k.scale(4.2),
     {
       speed: 250,
       direction: "down",
@@ -117,30 +121,40 @@ k.scene("main", async () => {
     if (
       mouseAngle > lowerBound &&
       mouseAngle < upperBound &&
-      player.getCurAnim() !== "walk"
+      player.getCurAnim().name !== "walk-up"
     ) {
-      player.play("walk");
+      player.play("walk-up");
       player.direction = "up";
+      return;
+    }
+
+    if (
+      mouseAngle < -lowerBound &&
+      mouseAngle > -upperBound &&
+      player.getCurAnim().name !== "walk-down"
+    ) {
+      player.play("walk-down");
+      player.direction = "down";
       return;
     }
 
     if (Math.abs(mouseAngle) > upperBound) {
       player.flipX = false;
-      if (player.getCurAnim() !== "walk") player.play("walk");
+      if (player.getCurAnim().name !== "walk-side") player.play("walk-side");
       player.direction = "right";
       return;
     }
 
     if (Math.abs(mouseAngle) < lowerBound) {
       player.flipX = true;
-      if (player.getCurAnim() !== "walk") player.play("walk");
+      if (player.getCurAnim().name !== "walk-side") player.play("walk-side");
       player.direction = "left";
       return;
     }
   });
 
   k.onMouseRelease(() => {
-    player.play("idle");
+    player.play("idle-down");
   });
 });
 
