@@ -12,11 +12,11 @@ k.loadSprite("character", "./character.png", {
   sliceY: 31,
   anims: {
     "idle-down": 936,
-    "walk-down": { from: 936, to: 939, loop: true, speed: 4 },
+    "walk-down": { from: 936, to: 939, loop: true, speed: 5 },
     "idle-side": 975,
-    "walk-side": { from: 975, to: 978, loop: true, speed: 4 },
+    "walk-side": { from: 975, to: 978, loop: true, speed: 5 },
     "idle-up": 1014,
-    "walk-up": { from: 1014, to: 1017, loop: true, speed: 4 },
+    "walk-up": { from: 1014, to: 1017, loop: true, speed: 5 },
   },
 });
 
@@ -29,6 +29,8 @@ k.loadSprite("honda", "./hondica.png", {
   sliceX: 9,
   sliceY: 4.3,
 });
+
+k.loadSprite("bg", "./bg/1.png");
 
 k.loadSprite("map", "./map.png");
 k.setBackground(k.Color.fromHex("#311047"));
