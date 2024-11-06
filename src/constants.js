@@ -7,8 +7,7 @@ export const dialogueData = {
     <p>
         I'm a Frontend Developer with over five years of experience, specializing in the Vue ecosystem. I love creating and refining web applications. 
     </p>
-    <p> Beyond Vue, I’m always eager to dive into other technologies and expand my skillset. Driven by curiosity and innovation, I’m passionate about tackling new challenges and bringing fresh ideas to life.</p>
-    <p>Let's connect!</p>
+    <p> Beyond Vue, I’m always eager to dive into other technologies and expand my skillset. </p>
     <p>
         🌐 <a href="https://github.com/snepsnepy" target="_blank">GitHub</a><br>
         💼 <a href="https://www.linkedin.com/in/savulescumihnea/" target="_blank">LinkedIn</a>
