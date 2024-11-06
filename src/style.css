@@ -5,7 +5,7 @@
 
 body {
   font-family: jersey;
-  font-size: 3rem;
+  font-size: 2rem;
   overflow: hidden;
 }
 
@@ -44,11 +44,12 @@ body {
   border-radius: 4px;
   padding: 1rem;
   font-size: inherit;
+  font-family: jersey;
 }
 
 .btn-container {
   align-self: flex-end;
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 .note {
