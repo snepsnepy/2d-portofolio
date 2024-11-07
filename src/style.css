@@ -74,23 +74,13 @@ body {
   flex-direction: column;
   color: #ffeb00;
   user-select: none;
-  font-size: 60px;
-}
-
-.title2 {
-  position: absolute;
-  left: 5%;
-  top: 5vh;
-  display: flex;
-  flex-direction: column;
-  color: #ffeb00;
-  user-select: none;
-  font-size: 60px;
+  font-size: 72px;
+  line-height: 45px;
 }
 
 @media only screen and (max-width: 768px) {
   .ui-text,
   .ui-close-btn {
-    font-size: 24px !important;
+    font-size: 27px !important;
   }
 }

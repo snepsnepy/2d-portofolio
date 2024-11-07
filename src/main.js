@@ -37,7 +37,7 @@ k.scene("main", async () => {
   k.add([
     k.pos(15, 420),
     k.text("Click/Tap around to move", {
-      size: 24, // 48 pixels tall
+      size: 28, // 48 pixels tall
       width: 500, // it'll wrap to next line when width exceeds this value
       font: "jersey", // specify any font you loaded or browser built-in
     }),
@@ -49,7 +49,7 @@ k.scene("main", async () => {
     k.text(
       "Feel free to sit at the table, use the PC, or check out the cars to discover more about me!",
       {
-        size: 24, // 48 pixels tall
+        size: 32, // 48 pixels tall
         width: 500, // it'll wrap to next line when width exceeds this value
         font: "jersey", // specify any font you loaded or browser built-in
       }

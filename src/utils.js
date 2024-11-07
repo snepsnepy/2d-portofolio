@@ -16,7 +16,7 @@ export const displayDialogue = (text, onDisplayEnd) => {
     }
 
     clearInterval(intervalRef);
-  }, 5);
+  }, 10);
 
   const closeBtn = document.getElementById("close");
 
@@ -35,9 +35,9 @@ export const setCamScale = (k) => {
   const resizeFactor = k.width() / k.height();
 
   if (resizeFactor < 1) {
-    k.camScale(k.vec2(0.5));
-    return;
+    k.camScale(k.vec2(0.6));
+    return true;
   }
 
-  k.camScale(k.vec2(1.2));
+  k.camScale(k.vec2(1.5));
 };
